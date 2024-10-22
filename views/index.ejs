@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div>My Blog</div>
+        <ul>
+            <li class="btn"><a href="/home">Home</a></li>
+            <li class="btn"><a href="/create">Create</a></li>
+            <li class="btn"><a href="/contact">Contact</a></li>
+        </ul>
+    </header>
+    <main class="container">
+        <div class="items">
+            <% if (items.length>0) { %>
+
+                <% items.forEach((item, index)=> { %>
+                    <div>
+                        <h2>
+                            <%= item.ttl %>
+                        </h2>
+                        <p>
+                            <%= item.cnt %>
+                        </p>
+                        <a href="/edit/<%= index%>" class="edit">Edit</a>
+                        <form action="/delete/<%= index %>" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                    <% }) %>
+                        <section class="clear">
+                            <form action="/clear" method="POST">
+                                <input type="submit" value="clear">
+                            </form>
+                        </section>
+
+
+        </div>
+        <% } else { %>
+
+            <section class="empty">
+                <h1>Such an empty space!</h1>
+            </section>
+
+            <% } %>
+
+    </main>
+
+    <footer id="footer">
+        All Copyrights Reserved
+    </footer>
+</body>
+
+</html>

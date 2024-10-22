@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form action="/edit/<%= index %>" method="POST">
+        <input type="text" name="title" value="<%= item.ttl %>" required><br>
+        <textarea name="content" required><%= item.cnt %></textarea><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
