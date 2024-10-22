@@ -38,6 +38,7 @@ app.post("/clear",(req,res)=>{
 app.post("/submit-contact", (req, res) => {
     const { name, email, subject, message } = req.body;
     console.log(`Name:${name} Email:${email} Subject:${subject} Message:${message}`);
+    res.redirect("/");
 });
 app.post("/edit/:index", (req, res) => {
     const index = Number( req.params.index);
