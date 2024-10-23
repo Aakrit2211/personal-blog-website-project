@@ -54,5 +54,5 @@ app.post("/delete/:index",(req,res)=>{
     res.redirect("/")
 })
 app.listen(3000, ()=>{
-    console.log("working");
+    console.log("server is running on https://localhost:3000");
 }) 
