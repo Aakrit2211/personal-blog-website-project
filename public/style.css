@@ -129,11 +129,9 @@ a:hover{
     background-color: black;
     color: white;
 }
-/* .items{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+*{
+    word-wrap: break-word;
+}
 @media (max-width:718px){
     header{
         font-size: 1rem;
