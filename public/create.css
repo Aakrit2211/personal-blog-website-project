@@ -32,3 +32,6 @@ input[type="submit"]{
     border-radius: 20px;
 
 }
+*{
+    word-wrap: break-word;
+}
